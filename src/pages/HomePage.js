@@ -13,7 +13,7 @@ const HomePage = () => {// a constant component
 	//const scrolllRef = useRef(null);
 	//commented by devi
 	//commented by sravya
-	
+
 	return (
 		<div>
 		<Grid container spacing={{ xs: 2, md: 3 }}>
