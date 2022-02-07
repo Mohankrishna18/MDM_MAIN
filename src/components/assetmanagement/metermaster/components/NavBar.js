@@ -24,6 +24,7 @@ const NavBar=()=>{//Header
       
     </AppBar><br/>
 	  
+	  
 		</div>
   </>
 	)
