@@ -11,19 +11,19 @@ export default function SearchAppBar() {
     <div>
 
 <CssBaseline />
-<AppBar position="static" style={{ background: '#2E3B55' }}>
+<AppBar elevation={12} position="static" style={{ background: '#c9d2d9',borderRadius:'30px' }}>
 <Toolbar>
   <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-  <HomeIcon style={{ color: 'white' }} />
+  <HomeIcon style={{ color: 'black' }} />
   </IconButton>
   <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-  <ChevronRightIcon style={{ color: 'white' }} />
+  <ChevronRightIcon style={{ color: 'black' }} />
   </IconButton>
-  <Typography>Configurables</Typography>
+  <Typography style={{ color: 'black' }}>Configurables</Typography>
   <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
-  <ChevronRightIcon style={{ color: 'white' }} />
+  <ChevronRightIcon style={{ color: 'black' }} />
   </IconButton>
-  <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Meter Parameters</Typography>
+  <Typography style={{ marginRight: 'auto', marginLeft: '0px', color: 'black' }} variant='h6'>Meter Parameters</Typography>
 </Toolbar>
 
 </AppBar>
