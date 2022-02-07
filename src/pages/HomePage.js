@@ -11,8 +11,8 @@ import CustomizedAccordions from '../components/staticComponents/DropDown';
 const HomePage = () => {// a constant component
 
 	//const scrolllRef = useRef(null);
-	//commented by devi
-	//commented by sravya
+	
+//removed comments
 
 	return (
 		//grid container layout
