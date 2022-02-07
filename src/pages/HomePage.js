@@ -8,6 +8,8 @@ import DummyComponent from '../components/DummyComponent';
 //import { useEffect, useRef } from 'react';
 import CustomizedAccordions from '../components/staticComponents/DropDown';
 
+
+//done
 const HomePage = () => {// a constant component
 
 	//const scrolllRef = useRef(null);
