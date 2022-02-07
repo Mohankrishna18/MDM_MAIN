@@ -51,26 +51,27 @@ export default function EventIndividualReport() {
             >
                 <div>
 			<CssBaseline />
-			<AppBar position="static" style={{ background: '#2E3B55' }}>
+            <AppBar elevation={12} position="static" style={{ background: '#c9d2d9',borderRadius:'30px' }}>
 				<Toolbar>
 					<IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-						<HomeIcon style={{ color: 'white' }} />
+						<HomeIcon style={{ color: 'black' }} />
 					</IconButton>
 					<IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-						<ChevronRightIcon style={{ color: 'white' }} />
+						<ChevronRightIcon style={{ color: 'black' }} />
 					</IconButton>
-					<Typography>Reports</Typography>
+					<Typography style={{color: 'black'}}>Reports</Typography>
 					<IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
-						<ChevronRightIcon style={{ color: 'white' }} />
+						<ChevronRightIcon style={{ color: 'black' }} />
 					</IconButton>
-					<Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Events Individual Report</Typography>
+					<Typography style={{ marginRight: 'auto', marginLeft: '0px',color: 'black' }} variant='h6'>Events Individual Report</Typography>
 				</Toolbar>
 			</AppBar>
+            <br pb={'0'}></br>
 		</div>
 
 
                 <form action="" onSubmit={handleSubmit}>
-                    <Card elevation={4}>
+                    <Card elevation={4} style={{borderRadius:20}}>
                         <Grid container direction="row" justifyContent="center" alignContent="center" paddingTop={5} >
                             <TextField
                                 name='sections'
@@ -207,7 +208,7 @@ export default function EventIndividualReport() {
                                 />
                             </div>
                         </Grid>
-                        <Grid container direction="row" justifyContent="center" alignContent="right" paddingTop={3} >
+                        <Grid container direction="row" justifyContent="center" alignContent="right" paddingTop={3} pb={5}>
 
                             <Grid item xs={2} spacing={1} justify="flex-end">
                                 <Button
