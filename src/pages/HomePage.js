@@ -13,12 +13,7 @@ const HomePage = () => {// a constant component
 	//const scrolllRef = useRef(null);
 
 	
-//removed comments
-
-
-	//commented by devi
-	//commented by sravya
-	//removed the comments by sravya
+//removed both comments in home page
 
 	return (
 		//grid container layout
