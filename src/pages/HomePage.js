@@ -15,6 +15,7 @@ const HomePage = () => {// a constant component
 	//commented by sravya
 
 	return (
+		//grid container layout
 		<div>
 		<Grid container spacing={{ xs: 2, md: 3 }}>
 		<Grid item xs={12}>
@@ -23,7 +24,7 @@ const HomePage = () => {// a constant component
 				<Grid item xs={200}>
 					<CustomizedAccordions />
 				</Grid>
-				
+		
 			</Grid>
 		</div>
 	);
