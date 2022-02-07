@@ -63,27 +63,14 @@ const closedMixin = (theme) => ({
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
-
 	display: 'flex',
-
 	alignItems: 'center',
-
-
-
 	position: 'relative',
-
-
-
 	position: 'static',
-
-
-
 	justifyContent: 'flex-end',
-
 	padding: theme.spacing(0, 1),
 
 	// necessary for content to be below app bar
-
 	...theme.mixins.toolbar,
 
 }));
@@ -178,8 +165,10 @@ export default function MiniDrawer() {
 	}
 	return (
 		<>
+		
+		<ThemeProvider theme={themee}>	
 			<Box sx={{ display: 'flex' }}>
-
+			<Paper style={{ height: "100vh" }}>
 				<CssBaseline />
 				<AppBar style={{ borderRadius: '30px', background: '#29434e' }} open={open} >
 					<Toolbar>
@@ -216,28 +205,23 @@ export default function MiniDrawer() {
 						<Tooltip title="search" placement="top">
 							<MainSearch />
 						</Tooltip>
-
+						<Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)}>
+          </Switch>
 					</Toolbar>
 
 				</AppBar>
 				<Drawer variant="permanent" open={open} style={{ background: '#29434e' }}>
 					<DrawerHeader
-
 						justify content="center"
-
 						allign-items="center"
-
 					>
-
 						<CloudIcon />
-
 						<Typography parent variant='h4' justifyContent="center" paddingLeft="80px" paddingRight="60px">MDM</Typography>
 						<IconButton onClick={handleDrawerClose}>
 							{theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
 						</IconButton>
 					</DrawerHeader>
 					<Divider />
-
 					<List>
 						<ListItemButton onClick={handleClick}>
 							<ListItemIcon>
@@ -510,6 +494,7 @@ export default function MiniDrawer() {
 					<Divider />
 
 				</Drawer>
+		
 				<Box component="main" sx={{ flexGrow: 10, p: 3 }}>
 					<DrawerHeader />
 					<Grid container spacing={5}>
@@ -518,8 +503,9 @@ export default function MiniDrawer() {
 						</Grid>
 					</Grid>
 				</Box>
+				</Paper>
 			</Box>
-
+			</ThemeProvider>
 		</>
 	);
 }
