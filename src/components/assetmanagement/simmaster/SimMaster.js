@@ -61,7 +61,7 @@ export default function SimMaster() {
 		<br/>
 			<Card elevation={10} sx={{ pt: -19, pb: -8, pl: 1 ,maxHeight:400}} style={{borderRadius:20}}>
 			
-			<Box sx={{ display: 'Auto', pt: 6,pb:10, m: 1, flexDirection: 'row' }}>
+			<Box sx={{ display: 'Auto', pt: 4,pb:8, m: 1, flexDirection: 'row' }}>
 					
 						<Grid container rowSpacing={4} columnSpacing={ 4 }>
 						<Grid item xs={2}/>
