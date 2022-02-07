@@ -9,6 +9,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 //commented by devi
 //commented by GSDR
 
+// DO YOUR WORK FOR BETTER CODING.............................
+
 const LoginPage = () => {
 
 	const validationSchema = Yup.object().shape({
