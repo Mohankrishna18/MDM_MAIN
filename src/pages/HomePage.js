@@ -12,7 +12,7 @@ const HomePage = () => {// a constant component
 
 	//const scrolllRef = useRef(null);
 	//commented by devi
-	
+	//commented by sravya
 	
 	return (
 		<div>
