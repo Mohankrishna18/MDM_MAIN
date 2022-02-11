@@ -1,4 +1,3 @@
-//import are here
 import React, { useState } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -64,14 +63,27 @@ const closedMixin = (theme) => ({
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
+
 	display: 'flex',
+
 	alignItems: 'center',
+
+
+
 	position: 'relative',
+
+
+
 	position: 'static',
+
+
+
 	justifyContent: 'flex-end',
+
 	padding: theme.spacing(0, 1),
 
 	// necessary for content to be below app bar
+
 	...theme.mixins.toolbar,
 
 }));
@@ -93,7 +105,7 @@ const AppBar = styled(MuiAppBar, {
 		}),
 	}),
 }));
-//Drawerdata
+
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
 	({ theme, open }) => ({
 		width: drawerWidth,
@@ -203,8 +215,7 @@ export default function MiniDrawer() {
 						<Tooltip title="search" placement="top">
 							<MainSearch />
 						</Tooltip>
-						<Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)}>
-          </Switch>
+
 					</Toolbar>
 
 				</AppBar>
@@ -502,9 +513,8 @@ export default function MiniDrawer() {
 						</Grid>
 					</Grid>
 				</Box>
-				
 			</Box>
-		
+
 		</>
 	);
 }
