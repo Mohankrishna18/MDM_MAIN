@@ -64,8 +64,8 @@ export default function SimMaster() {
 			<Card elevation={10} sx={{ pt: -19, pb: -8, pl: 1, maxHeight: 400 }} style={{ borderRadius: 20 }}>
 
 
-				<Box sx={{ display: 'Auto', pt: 4, pb: 8, m: 1, flexDirection: 'row' }}>
-=======
+			
+
 				<Box sx={{ display: 'Auto', pt: 6, pb: 10, m: 1, flexDirection: 'row' }}>
 
 
