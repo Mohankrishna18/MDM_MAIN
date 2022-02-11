@@ -1,3 +1,4 @@
+//import are here
 import React, { useState } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -92,7 +93,7 @@ const AppBar = styled(MuiAppBar, {
 		}),
 	}),
 }));
-
+//Drawerdata
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
 	({ theme, open }) => ({
 		width: drawerWidth,
@@ -165,11 +166,8 @@ export default function MiniDrawer() {
 	}
 	return (
 		<>
-		
-		<ThemeProvider theme={themee}>	
-			<Box sx={{ display: 'flex' }}>
-			<Paper style={{ height: "100vh" }}>
-				<CssBaseline />
+			<Box sx={{ display: 'flex' }} style={{background: '#D9E6EB',height:'120vh'}}>
+				<CssBaseline/>
 				<AppBar style={{ borderRadius: '30px', background: '#29434e' }} open={open} >
 					<Toolbar>
 						<IconButton
@@ -210,10 +208,11 @@ export default function MiniDrawer() {
 					</Toolbar>
 
 				</AppBar>
-				<Drawer variant="permanent" open={open} style={{ background: '#29434e' }}>
+				<Drawer variant="permanent" open={open}>
 					<DrawerHeader
 						justify content="center"
-						allign-items="center"
+						align-items="center"
+
 					>
 						<CloudIcon />
 						<Typography parent variant='h4' justifyContent="center" paddingLeft="80px" paddingRight="60px">MDM</Typography>
@@ -222,7 +221,8 @@ export default function MiniDrawer() {
 						</IconButton>
 					</DrawerHeader>
 					<Divider />
-					<List>
+
+					<List style={{background: '#546e7a'}}>
 						<ListItemButton onClick={handleClick}>
 							<ListItemIcon>
 								<DashboardIcon />
@@ -230,9 +230,9 @@ export default function MiniDrawer() {
 							<ListItemText primary="Dashboards" />
 							{dashboard ? <ExpandLess /> : <ExpandMore />}
 						</ListItemButton>
-						<Collapse in={dashboard} timeout="auto" unmountOnExit>
+						<Collapse style={{background: '#819ca9'}} in={dashboard} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
-								<ListItemButton sx={{ pl: 3 }}>
+								<ListItemButton  sx={{ pl: 3 }}>
 									<ListItemIcon>
 										<FastForwardIcon />
 									</ListItemIcon>
@@ -257,7 +257,7 @@ export default function MiniDrawer() {
 						</Collapse>
 						<Divider />
 					</List>
-					<List>
+					<List style={{background: '#546e7a'}}>
 						<ListItemButton onClick={handleAssect}>
 							<ListItemIcon>
 								<ManageAccountsIcon />
@@ -265,7 +265,7 @@ export default function MiniDrawer() {
 							<ListItemText primary="Asset Management" />
 							{asset ? <ExpandLess /> : <ExpandMore />}
 						</ListItemButton>
-						<Collapse in={asset} timeout="auto" unmountOnExit>
+						<Collapse  style={{background: '#819ca9'}}in={asset} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
 								<ListItemButton sx={{ pl: 3 }}>
 									<ListItemIcon>
@@ -302,7 +302,7 @@ export default function MiniDrawer() {
 						</Collapse>
 						<Divider />
 					</List>
-					<List>
+					<List style={{background: '#546e7a'}}>
 						<ListItemButton onClick={handlemdm}>
 							<ListItemIcon>
 								<CastForEducationIcon />
@@ -310,7 +310,7 @@ export default function MiniDrawer() {
 							<ListItemText primary="Master Data Management" />
 							{mdm ? <ExpandLess /> : <ExpandMore />}
 						</ListItemButton>
-						<Collapse in={mdm} timeout="auto" unmountOnExit>
+						<Collapse style={{background: '#819ca9'}}in={mdm} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
 								<ListItemButton sx={{ pl: 3 }}>
 									<ListItemIcon>
@@ -336,7 +336,7 @@ export default function MiniDrawer() {
 						</Collapse>
 					</List>
 					<Divider />
-					<List>
+					<List style={{background: '#546e7a'}}>
 						<ListItemButton onClick={handlereport}>
 							<ListItemIcon>
 								<AssessmentIcon />
@@ -344,7 +344,7 @@ export default function MiniDrawer() {
 							<ListItemText primary="Reports" />
 							{report ? <ExpandLess /> : <ExpandMore />}
 						</ListItemButton>
-						<Collapse in={report} timeout="auto" unmountOnExit>
+						<Collapse style={{background: '#819ca9'}}in={report} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
 								<ListItemButton sx={{ pl: 3 }}>
 									<ListItemIcon>
@@ -469,7 +469,7 @@ export default function MiniDrawer() {
 						</Collapse>
 						<Divider />
 					</List>
-					<List>
+					<List style={{background: '#546e7a'}}>
 						<ListItemButton onClick={handleconfi}>
 							<ListItemIcon>
 								<ConfirmationNumberIcon />
@@ -477,7 +477,7 @@ export default function MiniDrawer() {
 							<ListItemText primary="Configurables" />
 							{conf ? <ExpandLess /> : <ExpandMore />}
 						</ListItemButton>
-						<Collapse in={conf} timeout="auto" unmountOnExit>
+						<Collapse style={{background: '#819ca9'}}in={conf} timeout="auto" unmountOnExit>
 							<List component="div" disablePadding>
 								<ListItemButton sx={{ pl: 3 }}>
 									<ListItemIcon>
@@ -494,8 +494,7 @@ export default function MiniDrawer() {
 					<Divider />
 
 				</Drawer>
-		
-				<Box component="main" sx={{ flexGrow: 10, p: 3 }}>
+				<Box component="main" sx={{ flexGrow: 10, pl: 10,pt:2,pr:10 }}>
 					<DrawerHeader />
 					<Grid container spacing={5}>
 						<Grid sx={12}>
@@ -503,9 +502,9 @@ export default function MiniDrawer() {
 						</Grid>
 					</Grid>
 				</Box>
-				</Paper>
+				
 			</Box>
-			</ThemeProvider>
+		
 		</>
 	);
 }
