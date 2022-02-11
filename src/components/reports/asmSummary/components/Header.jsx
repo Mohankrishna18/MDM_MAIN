@@ -9,19 +9,19 @@ const ResponsiveAppBar = () => {
 		<div>
 
 		<CssBaseline />
-		<AppBar position="static" style={{ background: '#2E3B55' }}>
+		<AppBar elevation={12} position="static" style={{ background: '#60777d',borderRadius:'30px' }}>
 		<Toolbar>
 		  <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-			<HomeIcon style={{ color: 'white' }} />
+			<HomeIcon style={{ color: 'black' }} />
 		  </IconButton>
 		  <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-			<ChevronRightIcon style={{ color: 'white' }} />
+			<ChevronRightIcon style={{ color: 'black' }} />
 		  </IconButton>
-		  <Typography>Reports</Typography>
+		  <Typography style={{color:'black'}}>Reports</Typography>
 		  <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
-			<ChevronRightIcon style={{ color: 'white' }} />
+			<ChevronRightIcon style={{ color: 'black' }} />
 		  </IconButton>
-		  <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Asset Management - Summary Report</Typography>
+		  <Typography style={{ marginRight: 'auto', marginLeft: '0px', color: 'black'  }} variant='h6'>Asset Management - Summary Report</Typography>
 		</Toolbar>
 		
 	  </AppBar>
