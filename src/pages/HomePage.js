@@ -7,7 +7,7 @@ import SelectedComponent from './SelectedComponent';
 import DummyComponent from '../components/DummyComponent';
 //import { useEffect, useRef } from 'react';
 import CustomizedAccordions from '../components/staticComponents/DropDown';
-
+// Comments added for the home page
 
 //done
 const HomePage = () => {// a constant component
@@ -21,6 +21,8 @@ const HomePage = () => {// a constant component
 					
 				</Grid>
 				<Grid item xs={200}>
+
+					
 					<CustomizedAccordions />
 				</Grid>
 		

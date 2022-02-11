@@ -63,7 +63,11 @@ export default function SimMaster() {
 			<br />
 			<Card elevation={10} sx={{ pt: -19, pb: -8, pl: 1, maxHeight: 400 }} style={{ borderRadius: 20 }}>
 
+
+				<Box sx={{ display: 'Auto', pt: 4, pb: 8, m: 1, flexDirection: 'row' }}>
+=======
 				<Box sx={{ display: 'Auto', pt: 6, pb: 10, m: 1, flexDirection: 'row' }}>
+
 
 					<Grid container rowSpacing={4} columnSpacing={4}>
 						<Grid item xs={2} />
@@ -232,10 +236,15 @@ export default function SimMaster() {
 						</Grid>
 						<Grid item xs={12} md={12}>
 							<Stack spacing={2} direction="row" justifyContent="center">
+
+								<Button variant="contained" color="success" onClick={handleSubmit}>SUBMIT </Button>
+								<Button variant="contained">CLEAR</Button>
+=======
 								<Button variant="contained" color="success" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }} onClick={handleSubmit}>SUBMIT </Button>
 								<Button variant="contained" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }}>CLEAR</Button>
 								<ButtonTheme />
 								<ClearButton />
+
 							</Stack>
 						</Grid>
 					</Grid>
