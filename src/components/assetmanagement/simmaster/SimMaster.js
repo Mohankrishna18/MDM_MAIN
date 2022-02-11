@@ -237,9 +237,6 @@ export default function SimMaster() {
 						<Grid item xs={12} md={12}>
 							<Stack spacing={2} direction="row" justifyContent="center">
 
-								<Button variant="contained" color="success" onClick={handleSubmit}>SUBMIT </Button>
-								<Button variant="contained">CLEAR</Button>
-=======
 								<Button variant="contained" color="success" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }} onClick={handleSubmit}>SUBMIT </Button>
 								<Button variant="contained" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }}>CLEAR</Button>
 								<ButtonTheme />

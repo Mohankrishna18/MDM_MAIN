@@ -1,4 +1,4 @@
-import { Typography, Grid, TextField, MenuItem, Button } from '@mui/material';
+import { Typography, Grid, TextField, MenuItem, Button, Card, Stack } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 //import Buttons from '../components/Buttons';
@@ -111,8 +111,11 @@ const BillingEnergyReportPage = () => {
 		
 		<Box sx={{ width: '100%' }} component="form" onSubmit={submitData}>
 			<ResponsiveAppBar/>
-			<Grid container direction={'row'}>
-				<Grid item xl={6} md={3} xs={12} sm={6}>
+			<br/>
+			<Card elevation={10} sx={{ pt: 2, pb: 2, pl: 3, pr: 3, maxHeight: 500 }} style={{ borderRadius: 20 }}>
+				<Grid container direction={'row'}>
+					<Grid item xl={6} md={3} xs={12} sm={6}>
+			
 					<Typography variant="overline">Discom :</Typography>
 				</Grid>
 				<Grid item xl={6} md={3} xs={12} sm={6}>
@@ -262,29 +265,14 @@ const BillingEnergyReportPage = () => {
 			</Grid>
 			<div style={{ minHeight: '40px' }} />
 			<Grid container>
-				<Grid item xs={6}>
-					<Button
-						type="submit"
-						style={{ borderRadius: '20px', width: '90px', marginLeft: '50%' }}
-						color="success"
-						size="small"
-						variant="contained"
-					>
-						Submit
-					</Button>
+					<Grid item xs={12} md={12}>
+						<Stack spacing={2} direction="row" justifyContent="center">
+							<Button variant="contained" color="success" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }} >SUBMIT</Button>
+							<Button variant="contained" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }}>CLEAR</Button>
+						</Stack>
+					</Grid>
 				</Grid>
-				<Grid item xs={6}>
-					<Button
-						type="reset"
-						style={{ borderRadius: '20px', width: '90px', marginRight: '50%' }}
-						size="small"
-						color="error"
-						variant="contained"
-					>
-						Clear
-					</Button>
-				</Grid>
-			</Grid>
+			</Card>
 		</Box>
 	);
 };

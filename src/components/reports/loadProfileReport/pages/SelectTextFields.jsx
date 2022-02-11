@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Button, CssBaseline, AppBar, Toolbar, Typography, Box, TextField, Grid, MenuItem } from '@mui/material';
+import { Stack, Button, CssBaseline, AppBar, Toolbar, Typography, Box, TextField, Grid, MenuItem, Card } from '@mui/material';
 import Home from '@mui/icons-material/Home';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 //import { DTR } from './Dropdown';
@@ -111,27 +111,28 @@ export default function SelectTextFields() {
       autoComplete="off"
     >
 <CssBaseline />
-      <AppBar position="static" style={{ background: '#2E3B55' }}>
+<AppBar elevation={12} position="static" style={{ background: '#60777d',borderRadius:'30px' }}>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-          <HomeIcon style={{ color: 'white' }} />
+          <HomeIcon style={{ color: 'black' }} />
         </IconButton>
         <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
-          <ChevronRightIcon style={{ color: 'white' }} />
+          <ChevronRightIcon style={{ color: 'black' }} />
         </IconButton>
-        <Typography>Reports</Typography>
+        <Typography style={{color:'black'}}>Reports</Typography>
         <IconButton style={{ marginLeft: '0px' }} size="large" edge="start" color="inherit" aria-label="open drawer">
-          <ChevronRightIcon style={{ color: 'white' }} />
+          <ChevronRightIcon style={{ color: 'black' }} />
         </IconButton>
-        <Typography style={{ marginRight: 'auto', marginLeft: '0px' }} variant='h6'>Load Profile Report</Typography>
+        <Typography style={{ marginRight: 'auto', marginLeft: '0px', color:'black' }} variant='h6'>Load Profile Report</Typography>
       </Toolbar>
       
     </AppBar>
+    <br/>
 
-      <Box sx={{ display: 'flex', p: 1, m: 1, bgcolor: 'background.paper', flexDirection: 'row', }}>
-      </Box>
-      <Grid container direction="row" justifyContent="center" alignContent="center" >
-
+    <Card elevation={10} sx={{ pt: 2, pb: 2, pl: 3,pr: 3, maxHeight: 500 }} style={{ borderRadius: 20 }}>
+      
+    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid item xs={3}>
         <TextField
           name="sections"
           select
@@ -148,6 +149,8 @@ export default function SelectTextFields() {
             </MenuItem>
           ))}
         </TextField>
+        </Grid>
+        <Grid item xs={3}>
         <TextField
           select
           fullWidth
@@ -163,8 +166,9 @@ export default function SelectTextFields() {
             </MenuItem>
           ))}
         </TextField>
-      </Grid>
-      <Grid container direction="row" justifyContent="center" alignContent="center" >
+        </Grid>
+        <Grid item xs={3}>
+      
         <TextField
           select
           fullWidth
@@ -180,6 +184,8 @@ export default function SelectTextFields() {
             </MenuItem>
           ))}
         </TextField>
+        </Grid>
+        <Grid item xs={3}>
         <TextField
           select
           fullWidth
@@ -195,6 +201,7 @@ export default function SelectTextFields() {
             </MenuItem>
           ))}
         </TextField>
+        </Grid>
       </Grid>
       <Grid container direction="row" justifyContent="center" alignContent="center" >
         <TextField
@@ -220,7 +227,7 @@ export default function SelectTextFields() {
           ></TextField>
         </div>
       </Grid>
-      );
+      
       <Grid container direction="row" justifyContent="center" alignContent="center" >
         <TextField
           name="FromDate"
@@ -246,11 +253,14 @@ export default function SelectTextFields() {
             shrink: true
           }}
         />
-      </Grid>
+      <Grid item xs={12} md={12}>
       <Stack spacing={2} direction="row" justifyContent="center">
-        <Button variant="contained" onClick={handleSubmit} ><Link to="/chart" style={{ textDecoration: 'none', textcolor: 'none' }} color="inherit" underline="none">SUBMIT</Link></Button>
-        <Button variant="contained" onClick={clear} >CLEAR</Button>
+      <Button variant="contained" color="success" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }} onClick={handleSubmit}><Link to="/chart" style={{ textDecoration: 'none', color: 'black' }} color="inherit" underline="none">SUBMIT</Link></Button>
+      <Button variant="contained" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }}>CLEAR</Button>
       </Stack>
+      </Grid>
+      </Grid>
+      </Card>
       <br />
     </Box>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Button, CssBaseline, AppBar, Toolbar, Typography, Box, TextField, Grid } from '@mui/material';
+import { Stack, Button, CssBaseline, AppBar, Toolbar, Typography, Box, TextField, Grid , Card} from '@mui/material';
 import { DTR, Feeder, Section, SubStation } from './Dropdown';
 import { useState } from 'react';
 import HomeIcon from '@mui/icons-material/Home';
@@ -61,7 +61,7 @@ export default function SelectTextFields() {//Main component
 <div>
 
 <CssBaseline />
-<AppBar position="static" style={{ background: '#2E3B55' }}>
+<AppBar elevation={12} position="static" style={{ background: '#60777d',borderRadius:'30px' }}>
 <Toolbar>
   <IconButton size="large" edge="start" color="inherit" aria-label="open drawer">
   <HomeIcon style={{ color: 'white' }} />
@@ -78,10 +78,11 @@ export default function SelectTextFields() {//Main component
 
 </AppBar>
   </div>
+  <br/>
 
-      <Box sx={{ display: 'flex', p: 1, m: 1, bgcolor: 'background.paper', flexDirection: 'row', }}>
-      </Box>
-      <Grid container direction="row" justifyContent="center" alignContent="center" >
+    <Card elevation={10} sx={{ pt: 2, pb: 2, pl: 3,pr: 3, maxHeight: 500 }} style={{ borderRadius: 20 }}>
+    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid item xs={3}>
         <TextField
           id="outlined-select-currency-native"
           name="Sections"
@@ -99,6 +100,8 @@ export default function SelectTextFields() {//Main component
             </option>
           ))}
         </TextField>
+        </Grid>
+        <Grid item xs={3}>
         <TextField
           id="outlined-select-currency-native"
           select
@@ -117,8 +120,9 @@ export default function SelectTextFields() {//Main component
             </option>
           ))}
         </TextField>
-      </Grid>
-      <Grid container direction="row" justifyContent="center" alignContent="center" >
+        </Grid>
+      
+        <Grid item xs={3}>
         <TextField
           id="outlined-select-currency-native"
           select
@@ -137,6 +141,8 @@ export default function SelectTextFields() {//Main component
             </option>
           ))}
         </TextField>
+        </Grid>
+        <Grid item xs={3}>
         <TextField
           id="outlined-select-currency-native"
           select
@@ -155,7 +161,9 @@ export default function SelectTextFields() {//Main component
             </option>
           ))}
         </TextField>
+        </Grid>
       </Grid>
+     
       <Grid container direction="row" justifyContent="center" alignContent="center" >
         <TextField
           id="outlined-select-currency-native"
@@ -180,7 +188,7 @@ export default function SelectTextFields() {//Main component
           ></TextField>
         </div>
       </Grid>
-      );
+     
       <Grid container direction="row" justifyContent="center" alignContent="center" >
         <TextField
           name="FromDate"
@@ -207,11 +215,14 @@ export default function SelectTextFields() {//Main component
           }}
         />
       </Grid>
+      <Grid item xs={12} md={12}>
       <Stack spacing={2} direction="row" justifyContent="center">
-        <Button variant="contained" onClick={handleSubmit} >SUBMIT </Button>
-        <Button variant="contained" onClick={clear} >CLEAR</Button>
+      <Button variant="contained" color="success" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }} onClick={handleSubmit}>SUBMIT</Button>
+      <Button variant="contained" style={{ borderRadius: 50, color: 'black', backgroundImage: `linear-gradient(to left, rgb(209,209,209), rgb(41,67,78))`, fontWeight: 'bold' }}>CLEAR</Button>
       </Stack>
+      </Grid>
       <br />
+      </Card>
     </Box>
   );
 }
