@@ -188,7 +188,7 @@ const MeterMaster = () => {
         })
     }
     return (
-        <card >
+        <Card elevation={10} sx={{ pt: -19, pb: -4, pl: 1 ,maxHeight:375}} style={{borderRadius:20}}>
             <Box
                 component="form"
                 sx={{
@@ -378,7 +378,7 @@ const MeterMaster = () => {
                 <Button variant="contained" onClick={() => dispatch({ type: 'new-meter' })}> NEW METER</Button>
             </Stack>
             <br />
-        </card>
+        </Card>
     )
 }
 export default MeterMaster;
