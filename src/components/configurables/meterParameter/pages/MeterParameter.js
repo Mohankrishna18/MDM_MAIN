@@ -3,7 +3,7 @@ import MeterParameters from '../components/MeterParameters';
 import SearchAppBar from '../components/Header';
 import Meter from '../components/Meter';
 
-
+//meter parameters
 import { Container, Grid } from '@material-ui/core';
 
 function MeterParameter() {
